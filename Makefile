@@ -1,12 +1,15 @@
 CXX = g++
 
-# Adicionamos -Xpreprocessor e o caminho (-I) para ele achar o 'omp.h'
-CXXFLAGS = -g -Wall -O3 -march=native -funroll-loops -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include
+# No Linux, basta usar a flag -fopenmp nativa do g++
+CXXFLAGS = -g -Wall -O3 -march=native -funroll-loops -fopenmp
 
-# Adicionamos o caminho (-L) para ele achar a biblioteca compilada (libomp)
-LDFLAGS = -L/usr/local/opt/libomp/lib -lomp
+# Não precisamos de caminhos extras de biblioteca (-L), apenas do -fopenmp no link
+LDFLAGS = -fopenmp
 
 all: sum
 
 sum: main.cc sum.cc
 	$(CXX) $(CXXFLAGS) -o sum main.cc sum.cc $(LDFLAGS)
+
+clean:
+	rm -f sum *.o
