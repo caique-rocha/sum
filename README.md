@@ -12,11 +12,11 @@ O objetivo principal é comparar o desempenho e o tempo de execução do algorit
 
 ## 📋 Como o problema funciona
 
-* [cite_start]**Entrada:** O programa espera receber dois valores inteiros através do terminal: o número de dígitos de precisão ($D$) e o número de termos para calcular ($N$)[cite: 67, 68].
-* [cite_start]**Saída:** O programa imprime uma única linha na tela com o resultado exato e formatado com as $D$ casas decimais solicitadas[cite: 70, 71].
+* **Entrada:** O programa espera receber dois valores inteiros através do terminal: o número de dígitos de precisão ($D$) e o número de termos para calcular ($N$).
+* **Saída:** O programa imprime uma única linha na tela com o resultado exato e formatado com as $D$ casas decimais solicitadas.
 
 **Exemplo Prático:**
-[cite_start]Se a entrada for `12 7` [cite: 74][cite_start], a saída gerada será `2.592857142857`[cite: 76].
+Se a entrada for `12 7`, a saída gerada será `2.592857142857`.
 
 ---
 
